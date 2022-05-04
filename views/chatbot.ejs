@@ -1,0 +1,42 @@
+
+<div>
+ <div class="chat">
+      <style> /*This is the styleling for the chatbot*/
+        .rw-pro-widget-embedded{position: relative; height: 700px; width: 1400px; top: 100px; left: 250px; border-color: #b16df0; display: flex; flex-direction: column; border-width: 5px;}
+        .rw-conversation-container .rw-header {background-color: #b16df0;}
+        .rw-conversation-container .rw-messages-container .rw-message .rw-response {background-color: #b16df0;}
+        .rw-conversation-container .rw-messages-container .rw-message .rw-client {background-color: #006cff;}
+        .rw-conversation-container .rw-avatar{height: 40px;width: 40px; bottom: 37px;}
+      </style>
+        <script>!(function () {
+            let e = document.createElement("script"),
+              t = document.head || document.getElementsByTagName("head")[0];
+            (e.src = "https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.js"),
+              // Replace 1.x.x with the version that you want
+              (e.async = !0),
+              (e.onload = () => {
+                window.WebChat.default(
+                  {
+                    initPayload: '/greet',
+                    customData: { language: "en" },
+                    socketUrl: "http://localhost:5005",
+                    title: 'Uni-Bot',
+                    embedded: 'true',
+                    profileAvatar:'graduation-cap.svg',
+                    
+                    showMessageDate: 'true',
+                    customMessageDelay: (message) => {
+                      let delay = message.length * 30;
+                      if (delay > 3 * 1000) delay = 3 * 1000;
+                      if (delay < 800) delay = 800;
+                      return delay;
+                    }
+                  },
+                  null
+                );
+              }),
+              t.insertBefore(e, t.firstChild);
+          })();
+          </script>
+      </div> 
+      </div>

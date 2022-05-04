@@ -1,0 +1,178 @@
+version: "3.1"
+
+rules:
+
+- rule: N/A
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: N/A
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: N/A
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: N/A
+  steps:
+  - intent: scholarship
+  - action: utter_scholar
+
+- rule: N/A
+  steps:
+  - intent: summer_warning
+  - action: utter_summer
+
+- rule: N/A
+  steps:
+  - intent: summer_courses
+  - action: utter_summer_courses
+
+- rule: N/A
+  steps:
+  - intent: ranking
+  - action: utter_fastuni
+
+- rule: A/A
+  steps:
+  - intent: job_rate
+  - action: utter_job
+
+- rule: N/A
+  steps:
+  - intent: admision_schedule
+  - action: utter_schedule
+
+- rule: N/A
+  steps:
+  - intent: past_papers
+  - action: utter_sample
+
+- rule: N/A
+  steps:
+  - intent: admission
+  - action: utter_recruit
+
+- rule: N/A
+  steps:
+  - intent: admission2
+  - action: utter_admins
+
+- rule: N/A
+  steps:
+  - intent: apply
+  - action: utter_apply
+
+- rule: N/A
+  steps:
+  - intent: fee_structure
+  - action: utter_fee
+
+- rule: N/A
+  steps:
+  - intent: offered_programs
+  - action: utter_programs
+
+- rule: N/A
+  steps:
+  - intent: academic_period
+  - action: utter_period
+
+- rule: N/A
+  steps:
+  - intent: GPA
+  - action: utter_gpa
+
+- rule: N/A
+  steps:
+  - intent: Transfer
+  - action: utter_Transfer
+
+- rule: N/A
+  steps:
+  - intent: classes
+  - action: utter_class
+
+- rule: N/A
+  steps:
+  - intent: graduation
+  - action: utter_graduate
+
+- rule: N/A
+  steps:
+  - intent: Admission_of_former
+  - action: utter_former
+
+- rule: N/A
+  steps:
+  - intent: deen
+  - action: utter_deen
+
+- rule: N/A
+  steps:
+  - intent: library
+  - action: utter_library
+
+- rule: N/A
+  steps:
+  - intent: contact
+  - action: utter_contacts
+
+- rule: N/A
+  steps:
+  - intent: smalltalk_greetings_hello
+  - action: utter_smalltalk_greetings_hello
+
+- rule: N/A
+  steps:
+  - intent: smalltalk_greetings_how_are_you
+  - action: utter_smalltalk_greetings_how_are_you
+
+- rule: N/A
+  steps:
+  - intent: smalltalk_greetings_nice_to_meet_you
+  - action: utter_smalltalk_greetings_nice_to_meet_you
+
+- rule: N/A
+  steps:
+  - intent: smalltalk_greetings_whatsup
+  - action: utter_smalltalk_greetings_whatsup
+
+- rule: N/A
+  steps:
+  - intent: smalltalk_user_back
+  - action: utter_smalltalk_user_back
+
+- rule: N/A
+  steps:
+  - intent: smalltalk_user_does_not_want_to_talk
+  - action: utter_smalltalk_user_does_not_want_to_talk
+
+- rule: N/A
+  steps:
+  - intent: smalltalk_user_likes_agent
+  - action: utter_smalltalk_user_likes_agent
+
+- rule: N/A
+  steps:
+  - intent: smalltalk_user_loves_agent
+  - action: utter_smalltalk_user_loves_agent
+
+- rule: N/A
+  steps:
+  - intent: smalltalk_user_needs_advice
+  - action: utter_smalltalk_user_needs_advice
+
+- rule: N/A
+  steps:
+  - intent: smalltalk_user_sad
+  - action: utter_smalltalk_user_sad
+
+- rule: N/A
+  steps:
+  - intent: smalltalk_user_wants_to_talk
+  - action: utter_smalltalk_user_wants_to_talk
