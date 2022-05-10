@@ -1,30 +1,60 @@
-<!DOCTYPE html>
-<html>
-   <head>
-      <title><%- title %></title>
-      <meta name="viewport" content="with=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="main.css">
-      <script src="{{ url_for('static', filename='../settings.js') }}"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   </head>
-   <body>
-      <%- include('partials/header.ejs'); %>
+<style>
+   .toggle input {
+      height: 0;
+      width: 0;
+      visibility: hidden;
+   }
 
-      <main>
-         <h1>User Settings</h1>
+   .toggle label {
+      height: 25px;
+      width: 50px;
+      background-color: rgb(157, 157, 157);
+      border-radius: 25px;
+      cursor: pointer;
+      display: block;
+      position: relative;
+   }
 
-         <h4>Include private schools</h4>
-         <input type="checkbox" id="private" />
+   .toggle label:after {
+      height: 20px;
+      width: 20px;
+      background-color: #fff;
+      border-radius: 20px;
+      content:'';
+      position: absolute;
+      transition: .3s;
+   }
 
-         <h4>Include schools with a religious affiliation</h4>
-         <input type="checkbox" id="religious" />
+   .toggle input:checked + label {
+      background-color: rgb(117, 255, 165);
+   }
 
-         <h4>Only show elite schools</h4>
-         <input type="checkbox" id="elite" />
+   .toggle input:checked + label:after {
+      transform: translateX(100%);
+   }
+</style>
+<main>
+   <h1>User Settings</h1>
 
-         <input type="submit" name="apply" value="Apply Settings" onclick="applySettings();">
-      </main>
+   <form id="filterForm" action="">
+      <div class="toggle"> Include private schools
+         <input type="checkbox" id="privateSchool" name="filters" checked/>
+         <label for="privateSchool"></label>
+      </div>
 
-      <%- include('partials/footer.ejs'); %>
-   </body>
-</html>
+      <div class="toggle">Include schools with a religious affiliation
+         <input type="checkbox" id="religious" name="filters" checked/>
+         <label for="religious"></label>
+      </div>
+
+      <div class="toggle">Only show elite schools
+         <input type="checkbox" id="elite" name="filters"/>
+         <label for="elite"></label>
+      </div>
+
+      <br><input type="submit" name="apply" value="Apply Settings" />
+   </form>
+
+   <div id="topSchools"><br>Elite Schools: <br></div>
+
+</main>
